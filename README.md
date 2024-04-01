@@ -1,11 +1,19 @@
-# PhxTailwindFreebsd
+# phx_tailwind_freebsd
 
-**TODO: Add description**
+Workaround to install Tailwind binary on FreeBSD.
+
+Does this look familiar?
+
+
+
+References:
+- https://github.com/phoenixframework/tailwind/issues/49
+- https://github.com/tailwindlabs/tailwindcss/discussions/7826#discussioncomment-8788435
+
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `phx_tailwind_freebsd` to your list of dependencies in `mix.exs`:
+Add `phx_tailwind_freebsd` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -15,7 +23,7 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/phx_tailwind_freebsd>.
 
+## Usage
+
+Run `mix tailwind.install_freebsd` in the project directory.

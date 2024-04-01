@@ -4,6 +4,7 @@ Workaround to install Tailwind binary on FreeBSD.
 
 Does this look familiar?
 
+![Screenshot_20240401_224433](https://github.com/hiway/phx_tailwind_freebsd/assets/23116/350de53f-843e-4510-9284-18f529219bbf)
 
 
 References:

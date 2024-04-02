@@ -25,6 +25,7 @@ defmodule PhxTailwindFreebsd do
             Mix.shell().info("Tailwind for FreeBSD is already installed.")
           else
             Mix.shell().error("SHA256 mismatch for installed Tailwind binary.")
+
             if is_cached?(version) do
               Mix.shell().info("Using cached Tailwind binary.")
               install_from_cache(version, 3)
@@ -32,16 +33,17 @@ defmodule PhxTailwindFreebsd do
               Mix.shell().info("Downloading Tailwind for FreeBSD, this may take a while.")
               download_to_cache(version, 3)
               install_from_cache(version, 3)
+              install(tailwind_freebsd_url(version))
+              Mix.shell().info("Tailwind for FreeBSD installed.")
             end
           end
         else
           Mix.shell().info("Downloading Tailwind for FreeBSD, this may take a while.")
           download_to_cache(version, 3)
           install_from_cache(version, 3)
+          install(tailwind_freebsd_url(version))
+          Mix.shell().info("Tailwind for FreeBSD installed.")
         end
-
-        install(tailwind_freebsd_url(version))
-        Mix.shell().info("Tailwind for FreeBSD installed.")
 
       _ ->
         install()

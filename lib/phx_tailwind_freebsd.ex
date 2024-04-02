@@ -30,25 +30,25 @@ defmodule PhxTailwindFreebsd do
               Mix.shell().info("Using cached Tailwind binary.")
               install_from_cache(version, 3)
             else
-              Mix.shell().info("Downloading Tailwind for FreeBSD, this may take a while.")
-              download_to_cache(version, 3)
-              install_from_cache(version, 3)
-              install(tailwind_freebsd_url(version))
-              Mix.shell().info("Tailwind for FreeBSD installed.")
+              download_and_install_from_cache(version)
             end
           end
         else
-          Mix.shell().info("Downloading Tailwind for FreeBSD, this may take a while.")
-          download_to_cache(version, 3)
-          install_from_cache(version, 3)
-          install(tailwind_freebsd_url(version))
-          Mix.shell().info("Tailwind for FreeBSD installed.")
+          download_and_install_from_cache(version)
         end
 
       _ ->
         install()
     end
   end
+
+  defp download_and_install_from_cache(version) do
+    Mix.shell().info("Downloading Tailwind for FreeBSD, this may take a while.")
+    download_to_cache(version, 3)
+    install_from_cache(version, 3)
+    install(tailwind_freebsd_url(version))
+    Mix.shell().info("Tailwind for FreeBSD installed.")
+end
 
   defp install_from_cache(version, retries) do
     retries = exit_if_retries_exceeded(retries)

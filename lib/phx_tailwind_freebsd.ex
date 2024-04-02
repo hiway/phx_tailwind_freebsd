@@ -7,7 +7,7 @@ defmodule PhxTailwindFreebsd do
   ```elixir
   def deps do
     [
-      {:phx_tailwind_freebsd, "~> 0.1.2", runtime: Mix.env() == :dev}
+      {:phx_tailwind_freebsd, "~> 0.2.0", runtime: Mix.env() == :dev}
     ]
   end
   ```

@@ -8,6 +8,6 @@ defmodule Mix.Tasks.Tailwind.InstallFreebsd do
   Install Tailwind binary for FreeBSD.
   """
   def run(_) do
-    PhxTailwindFreebsd.tailwind_maybe_freebsd()
+    PhxTailwindFreebsd.install_tailwind_on_freebsd()
   end
 end

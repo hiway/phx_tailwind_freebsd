@@ -19,7 +19,7 @@ Add `phx_tailwind_freebsd` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:phx_tailwind_freebsd, "~> 0.2.0", runtime: Mix.env() == :dev}
+    {:phx_tailwind_freebsd, "~> 0.2.1", runtime: Mix.env() == :dev}
   ]
 end
 ```

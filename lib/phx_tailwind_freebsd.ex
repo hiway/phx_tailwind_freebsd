@@ -34,8 +34,13 @@ defmodule PhxTailwindFreebsd do
             end
           end
         else
-          download_and_install_from_cache(version)
-        end
+          if is_cached?(version) do
+            Mix.shell().info("Using cached Tailwind binary.")
+            install_from_cache(version, 3)
+          else
+            download_and_install_from_cache(version)
+          end
+      end
 
       _ ->
         install()
